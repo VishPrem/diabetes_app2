@@ -1,4 +1,3 @@
-# Show complete dataset and summary in 'diabetes_home.py'
 # Import the streamlit modules.
 import streamlit as st
 
@@ -7,21 +6,19 @@ def app(diabetes_df):
     # Set the title to the home page contents.
     st.title('Early Diabetes Prediction Web App')
     # Provide a brief description for the web app.
-    st.markdown("Diabetes is a chronic (long-lasting) health condition that affects how your body turns food into energy. There isn’t a cure yet for diabetes, but losing weight, eating healthy food, and being active can really help in reducing the impact of diabetes. This Web app will help you to predict whether a person has diabetes or is prone to get diabetes in future by analysing the values of several features using the Decision Tree Classifier.")
-    # Add the 'beta_expander' to view full dataset 
-    st.subheader('View Data')
-    # with st.beta_expander('View Data'):
-    #   st.dataframe(diabetes_df)
-    # Add a checkbox in the first column. Display the column names of 'diabetes_df' on the click of checkbox.
-    # col_1, col_2, col_3 = st.beta_columns(3)
-    # with col_1:
-    #   if st.checkbox('Show all column names'):
-    #     st.table(diabetes_df.columns)
-    # # Add a checkbox in the second column. Display the column data-types of 'diabetes_df' on the click of checkbox.
-    # with col_2:
-    #   if st.checkbox('View column data-type'):
-    #     st.table(diabetes_df.dtypes)
-    # # Add a checkbox in the third column followed by a selectbox which accepts the column name whose data needs to be displayed.
-    # with col_3:
-    #   col = st.selectbox('Select column', tuple(diabetes_df.columns))
-    #   st.write(diabetes_df[col])      
+    st.markdown("Diabetes is a chronic (long-lasting) health condition that affects how your body turns food into energy. There isn’t a cure yet for diabetes, but losing weight, eating healthy food, and being active can really help in reducing the impact of diabetes. This Web app will help you to predict whether a person has diabetes or is prone to get diabetes in the future by analyzing the values of several features using the Decision Tree Classifier.")
+
+    # Add more content to fill the entire page
+    st.header('Why Use This App?')
+    st.markdown("This web app utilizes a machine learning model to provide an early prediction of diabetes based on various health features. By identifying individuals at risk, proactive measures can be taken to manage and reduce the impact of diabetes.")
+    
+    st.header('How to Use')
+    st.markdown("1. **Input Features:** Enter the necessary health parameters such as glucose levels, blood pressure, BMI, etc., in the input fields.")
+    st.markdown("2. **Prediction:** Click on the 'Predict' button to obtain the model's prediction.")
+    st.markdown("3. **Interpret Results:** The app will display whether the individual is predicted to have diabetes or not.")
+    
+    st.header('About the Model')
+    st.markdown("The predictive model is built using a Decision Tree Classifier. It has been trained on a dataset containing information about individuals with and without diabetes.")
+    
+    st.header('Disclaimer')
+    st.markdown("This web app provides predictions based on a machine learning model. It is not a substitute for professional medical advice, diagnosis, or treatment. Consult with a healthcare professional for accurate health assessments.")
