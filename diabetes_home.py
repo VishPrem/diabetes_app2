@@ -11,7 +11,7 @@ def app(diabetes_df):
     # Add the 'beta_expander' to view full dataset 
     st.subheader('View Data')
     with st.beta_expander('View Data'):
-      st.dataframe(diabetes_df)
+      #st.dataframe(diabetes_df)
     # Add a checkbox in the first column. Display the column names of 'diabetes_df' on the click of checkbox.
     col_1, col_2, col_3 = st.beta_columns(3)
     with col_1:
