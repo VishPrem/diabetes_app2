@@ -37,6 +37,6 @@ diabetes_df = load_data()
 pages_dict = {"Home": diabetes_home, "Predict Diabetes": diabetes_predict, "Visualise Decision Tree": diabetes_plots}
 st.sidebar.title('Navigation')
 # Add radio buttons in the sidebar for navigation and call the respective pages based on user selection.
-user_choice = st.sidebar.radio('Go to', pages_dict.keys())
+user_choice = st.sidebar.radio('Go to', list(pages_dict.keys()))
 selected_page = pages_dict[user_choice]
 selected_page.app(diabetes_df)
