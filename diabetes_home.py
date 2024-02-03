@@ -13,15 +13,15 @@ def app(diabetes_df):
     # with st.beta_expander('View Data'):
     #   st.dataframe(diabetes_df)
     # Add a checkbox in the first column. Display the column names of 'diabetes_df' on the click of checkbox.
-    col_1, col_2, col_3 = st.beta_columns(3)
-    with col_1:
-      if st.checkbox('Show all column names'):
-        st.table(diabetes_df.columns)
-    # Add a checkbox in the second column. Display the column data-types of 'diabetes_df' on the click of checkbox.
-    with col_2:
-      if st.checkbox('View column data-type'):
-        st.table(diabetes_df.dtypes)
-    # Add a checkbox in the third column followed by a selectbox which accepts the column name whose data needs to be displayed.
-    with col_3:
-      col = st.selectbox('Select column', tuple(diabetes_df.columns))
-      st.write(diabetes_df[col])      
+    # col_1, col_2, col_3 = st.beta_columns(3)
+    # with col_1:
+    #   if st.checkbox('Show all column names'):
+    #     st.table(diabetes_df.columns)
+    # # Add a checkbox in the second column. Display the column data-types of 'diabetes_df' on the click of checkbox.
+    # with col_2:
+    #   if st.checkbox('View column data-type'):
+    #     st.table(diabetes_df.dtypes)
+    # # Add a checkbox in the third column followed by a selectbox which accepts the column name whose data needs to be displayed.
+    # with col_3:
+    #   col = st.selectbox('Select column', tuple(diabetes_df.columns))
+    #   st.write(diabetes_df[col])      
